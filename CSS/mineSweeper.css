@@ -1,0 +1,23 @@
+.container{
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 10px;
+}
+.block{
+    width:25px;
+    height:25px;
+    max-width: 25px;
+    max-height: 25px;
+    min-width: 25px;
+    min-height: 25px;
+    border:1px solid black;
+    display:table-cell;
+    background-color: rgba(107, 102, 122, 0.75);
+}
+.row{
+    display:table-row;
+}
+.gamezone{
+    display: table;
+    width:1px;
+}
