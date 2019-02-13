@@ -102,9 +102,9 @@ function mineClicks(allMines,fx,fy){
                     document.getElementById(io+""+oi).removeEventListener('click',coloration);
                 }
             }
-            if (confirm('game over, start over?')){
-                createMineField(document.querySelector('.gamezone'),18,12,25);
-            }
+            // if (confirm('game over, start over?')){
+            //     createMineField(document.querySelector('.gamezone'),18,12,25);
+            // }
         });
     }
 }
