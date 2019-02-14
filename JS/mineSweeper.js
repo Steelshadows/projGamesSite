@@ -85,11 +85,10 @@ function mines(times,fieldx,fieldy){
 function mineClicks(allMines,fx,fy){
     for (let x = 0;x<allMines.length;x++){
         console.log(allMines[x]);
+        
         document.getElementById(allMines[x]).addEventListener("click", function(){
             audio.play()
-            audio.oncanplaythrough = function(){
-                audio.play();
-            }
+            audio.oncanplaythrough = function(){audio.play();}
             this.style.backgroundColor = "red";
 
             for(let i=0;fx>i;i++){
