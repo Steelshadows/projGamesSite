@@ -3,8 +3,22 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 var coloration = function(){
-    this.style.backgroundColor = 'rgba(167, 162, 182, 0.75)'
+    this.style.backgroundColor = 'rgba(167, 162, 182, 0.75)';
+    thisId = this.getAttribute('id');
+    if(this.getAttribute('value') > 0 && this.getAttribute('value') < 8){this.innerText = this.getAttribute('value');};
+
+    ffx = parseInt(thisId.substring(0,2));
+    console.log(ffx);
+    ffy = parseInt(thisId.substring(2,4));
+    console.log(ffy);
+    blockCheck(ffx,ffy);
+
+
+
 };
+function blockCheck(ffx,ffy){
+    
+}
 function explode(fx,fy){
     audio.play()
     audio.oncanplaythrough = function(){
@@ -61,6 +75,7 @@ function createMineField(parent,fieldx,fieldy,times){
             let locy = y;
             if(locx<10){locx = '0'+locx};
             if(locy<10){locy = '0'+locy};
+            block.setAttribute('value', 0);
             block.setAttribute('id',locx+""+locy);
             block.addEventListener('click', coloration)
             //block.innerHTML = locx+""+locy;
@@ -85,7 +100,76 @@ function mines(times,fieldx,fieldy){
 function mineClicks(allMines,fx,fy){
     for (let x = 0;x<allMines.length;x++){
         console.log(allMines[x]);
-        
+
+        ffx = parseInt(allMines[x].substring(0,2));
+        console.log(ffx);
+        ffy = parseInt(allMines[x].substring(2,4));
+        console.log(ffy);
+        fx1 = (ffx - 1).toString();
+        fx3 = (ffx + 1).toString();
+        fy1 = (ffy - 1).toString();
+        fy3 = (ffy + 1).toString();
+        if(ffx<10){ffx = '0'+ffx};
+        if(ffy<10){ffy = '0'+ffy};
+        console.log(ffy);
+        console.log(ffx);
+
+        if(fx1<10){fx1 = '0'+fx1};
+        if(fy1<10){fy1 = '0'+fy1};
+        console.log(fy1);
+        console.log(fx1);
+
+        if(fx3<10){fx3 = '0'+fx3};
+        if(fy3<10){fy3 = '0'+fy3};
+        console.log(fy3);
+        console.log(fx3);
+
+        document.getElementById(allMines[x]).setAttribute("value",parseInt(document.getElementById(allMines[x]).getAttribute("value")) + 9);
+        console.log(fx1+''+ffy)
+
+        if(document.getElementById(fx1+''+fy1) !=null){
+            document.getElementById(fx1+''+fy1).setAttribute("value",parseInt(document.getElementById(fx1+''+ffy).getAttribute("value")) + 1);
+        }
+        if(document.getElementById(fx1+''+ffy) !=null) {
+            document.getElementById(fx1+''+ffy).setAttribute("value", parseInt(document.getElementById(fx1 + '' + ffy).getAttribute("value")) + 1);
+        }
+        if(document.getElementById(fx1+''+fy3) !=null) {
+            document.getElementById(fx1 + '' + fy3).setAttribute("value", parseInt(document.getElementById(fx1 + '' + fy3).getAttribute("value")) + 1);
+        }
+        if(document.getElementById(ffx+''+fy1) !=null) {
+            document.getElementById(ffx + '' + fy1).setAttribute("value", parseInt(document.getElementById(ffx + '' + fy1).getAttribute("value")) + 1);
+        }
+        if(document.getElementById(ffx+''+fy3) !=null) {
+            document.getElementById(ffx + '' + fy3).setAttribute("value", parseInt(document.getElementById(ffx + '' + fy3).getAttribute("value")) + 1);
+        }
+        if(document.getElementById(fx3+''+fy1) !=null) {
+            document.getElementById(fx3 + '' + fy1).setAttribute("value", parseInt(document.getElementById(fx3 + '' + fy1).getAttribute("value")) + 1);
+        }
+        if(document.getElementById(fx3+''+ffy) !=null) {
+            document.getElementById(fx3 + '' + ffy).setAttribute("value", parseInt(document.getElementById(fx3 + '' + ffy).getAttribute("value")) + 1);
+        }
+        if(document.getElementById(fx3+''+fy3) !=null) {
+            document.getElementById(fx3 + '' + fy3).setAttribute("value", parseInt(document.getElementById(fx3 + '' + fy3).getAttribute("value")) + 1);
+        }
+
+
+
+
+
+
+
+        console.log(document.getElementById(allMines[x]).getAttribute("value"));
+        console.log(document.getElementById(allMines[x]));
+        // console.log(document.getElementById(fx1+''+(ffy)).getAttribute("value"));
+        console.log(document.getElementById(fx1+''+ffy));
+        console.log(document.getElementById(fx1+''+fy3));
+        console.log(document.getElementById(ffx+''+fy1));
+        console.log( document.getElementById(ffx+''+fy3));
+        console.log(document.getElementById(fx3+''+fy1));
+        console.log( document.getElementById(fx3+''+ffy));
+        console.log( document.getElementById(fx3+''+fy3));
+        document.getElementById('')
+
         document.getElementById(allMines[x]).addEventListener("click", function(){
             audio.play()
             audio.oncanplaythrough = function(){audio.play();}
