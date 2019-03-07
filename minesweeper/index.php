@@ -50,6 +50,8 @@ $JStop5 = ' var top1 ='.$top5[0]['score'].';
 <link rel="stylesheet" href="../CSS/mineSweeper.css">
 </head>
 <body>
+<header>
+</header>
 <div class="container">
     <div class="gamezone"></div>
     <div class="gameInfo">
@@ -69,16 +71,15 @@ $JStop5 = ' var top1 ='.$top5[0]['score'].';
             <p>amount of mines:</p>
             <input id="am" type="range" placeholder="mines" min="1" max="6" value="3">
         </div>
-        <div>
-            <button onclick="createMineField(document.querySelector('.gamezone'),document.querySelector('#lx').value,document.querySelector('#ly').value,document.querySelector('#am').value);">
-                Start Over
+        <div class="button">
+            <button class="button" onclick="createMineField(document.querySelector('.gamezone'),document.querySelector('#lx').value,document.querySelector('#ly').value,document.querySelector('#am').value);"><span>Start over</span>
             </button>
         </div>
         <!--<div>-->
             <!--<button onclick="if (score >= parseInt(localStorage.getItem('highscore'))){localStorage.setItem('highscore',score);};document.getElementById('highscore').innerHTML = 'highScore = ' + parseInt(localStorage.getItem('highscore'));">submit highscore</button>-->
         <!--</div>-->
         <div>
-            <button onclick="if(confirm('wilt u echt de locale highscore resetten?')){localStorage.setItem('highscore',0);document.getElementById('highscore').innerHTML = 'highScore = ' + parseInt(localStorage.getItem('highscore'))}">Reset highscore</button>
+            <button class="button" onclick="if(confirm('wilt u echt de locale highscore resetten?')){localStorage.setItem('highscore',0);document.getElementById('highscore').innerHTML = 'highScore = ' + parseInt(localStorage.getItem('highscore'))}"><span>Reset highscore</span></button>
         </div>
         <div id="scoreboard"></div>
         <div id="highscore"></div>
