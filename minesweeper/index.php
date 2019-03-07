@@ -6,7 +6,7 @@ if(isset($_GET['pname'])&&isset($_GET['updscore'])){
     $updatescoretext = $playernameupdate.'-'.$playerscorupdate.';';
     fwrite($scorefile,$updatescoretext);
     fclose($scorefile);
-    echo $updatescoretext;
+//    echo $updatescoretext;
 }
 function build_sorter($key) {
     return function ($a, $b) use ($key) {
