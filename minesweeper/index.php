@@ -1,4 +1,13 @@
 <?php
+if(isset($_GET['pname'])&&isset($_GET['updscore'])){
+    $playernameupdate = $_GET['pname'];
+    $playerscorupdate = $_GET['updscore'];
+    $scorefile = fopen('highScore/scores.txt','a');
+    $updatescoretext = $playernameupdate.'-'.$playerscorupdate.';';
+    fwrite($scorefile,$updatescoretext);
+    fclose($scorefile);
+    echo $updatescoretext;
+}
 function build_sorter($key) {
     return function ($a, $b) use ($key) {
         return strnatcmp($b[$key], $a[$key]);

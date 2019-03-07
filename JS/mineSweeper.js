@@ -11,23 +11,18 @@ function updatescores(){
     highscores.innerHTML = "highScore = " + parseInt(localStorage.getItem('highscore'));
 }
 function savescore(){
-    if (score >= parseInt(localStorage.getItem('highscore'))){localStorage.setItem('highscore',score);}
+    if (score >= parseInt(localStorage.getItem('highscore'))){localStorage.setItem('highscore',score);};
     highscores.innerHTML = "highScore = " + parseInt(localStorage.getItem('highscore'));
-    // if (parseInt(localStorage.getItem('highscore')>top1){
-    //     top1 = parseInt(localStorage.getItem('highscore');
-    // }
-    // else if (parseInt(localStorage.getItem('highscore')>top2){
-    //     top2 = parseInt(localStorage.getItem('highscore');
-    // }
-    // else if (parseInt(localStorage.getItem('highscore')>top3){
-    //     top3 = parseInt(localStorage.getItem('highscore');
-    // }
-    // else if (parseInt(localStorage.getItem('highscore')>top4){
-    //     top4 = parseInt(localStorage.getItem('highscore');
-    // }
-    // else if (parseInt(localStorage.getItem('highscore')>top5){
-    //     top5 = parseInt(localStorage.getItem('highscore');
-    // };
+    if (score>top5){
+        if(confirm('do you want to  upload your score?')){
+
+            playername = prompt('speler naam');
+            baseurl = location.protocol + '//' + location.host + location.pathname;
+            window.location = baseurl +'?updscore='+score+'&pname='+playername;
+        }
+
+
+    }
 }
 var audio = new Audio("sounds/bomb.mp3" ) ;
 function getRandomInt(max) {
