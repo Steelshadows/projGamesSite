@@ -21,3 +21,11 @@
     display: table;
     width:1px;
 }
+.tbl{display: table}
+.cell{
+    display: table-cell;
+    border-top:solid black 2px;
+    padding: 5px; }
+#leaderboard{
+    padding-top: 50px;
+}

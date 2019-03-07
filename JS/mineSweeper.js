@@ -3,9 +3,31 @@ scoreboard = document.querySelector('#scoreboard');
 highscores = document.getElementById('highscore');
 //document specific end
 score=0
+if(!localStorage.getItem('highscore')){
+    localStorage.setItem('highscore', 0)
+}
+function updatescores(){
+    scoreboard.innerHTML = 'score: '+score;
+    highscores.innerHTML = "highScore = " + parseInt(localStorage.getItem('highscore'));
+}
 function savescore(){
     if (score >= parseInt(localStorage.getItem('highscore'))){localStorage.setItem('highscore',score);}
     highscores.innerHTML = "highScore = " + parseInt(localStorage.getItem('highscore'));
+    // if (parseInt(localStorage.getItem('highscore')>top1){
+    //     top1 = parseInt(localStorage.getItem('highscore');
+    // }
+    // else if (parseInt(localStorage.getItem('highscore')>top2){
+    //     top2 = parseInt(localStorage.getItem('highscore');
+    // }
+    // else if (parseInt(localStorage.getItem('highscore')>top3){
+    //     top3 = parseInt(localStorage.getItem('highscore');
+    // }
+    // else if (parseInt(localStorage.getItem('highscore')>top4){
+    //     top4 = parseInt(localStorage.getItem('highscore');
+    // }
+    // else if (parseInt(localStorage.getItem('highscore')>top5){
+    //     top5 = parseInt(localStorage.getItem('highscore');
+    // };
 }
 var audio = new Audio("sounds/bomb.mp3" ) ;
 function getRandomInt(max) {
@@ -22,13 +44,12 @@ var coloration = function(){
     ffy = parseInt(thisId.substring(2,4));
     // console.log(ffy);
     blockCheck(ffx,ffy);
-    console.log(this.getAttribute('value'));
-    console.log(score);
+    // console.log(this.getAttribute('value'));
+    // console.log(score);
     // if (score >= parseInt(localStorage.getItem('highscore'))){localStorage.setItem('highscore',score);}
     if (this.className != 'block checked'){
         this.className += " checked";
-        score += (1+parseInt(this.getAttribute('value'))*200);
-
+        score += (5+parseInt(this.getAttribute('value'))*50);
     }
 
 
@@ -54,27 +75,29 @@ var coloration = function(){
     // console.log(fy3);
     // console.log(fx3);
 
-    // if (document.getElementById(fx1 + '' + fy1) != null && document.getElementById(fx1 + '' + fy1).getAttribute('value') < 1 && document.getElementById(fx1 + '' + fy1).className != 'block checked') {
-    //     document.getElementById(fx1 + '' + fy1).coloration();
-    // }
-    if (document.getElementById(fx1 + '' + ffy) != null && document.getElementById(fx1 + '' + ffy).getAttribute('value') < 1 && document.getElementById(fx1 + '' + ffy).className != 'block checked') {
-        document.getElementById(fx1 + '' + ffy).coloration();
-    }
-    // if (document.getElementById(fx1 + '' + fy3) != null && document.getElementById(fx1 + '' + fy3).getAttribute('value') < 1 && document.getElementById(fx1 + '' + fy3).className != 'block checked') {
-    //     document.getElementById(fx1 + '' + fy3).coloration();
-    // }
+
     if (document.getElementById(ffx + '' + fy1) != null && document.getElementById(ffx + '' + fy1).getAttribute('value') < 1 && document.getElementById(ffx + '' + fy1).className != 'block checked') {
         document.getElementById(ffx + '' + fy1).coloration();
     }
     if (document.getElementById(ffx + '' + fy3) != null && document.getElementById(ffx + '' + fy3).getAttribute('value') < 1 && document.getElementById(ffx + '' + fy3).className != 'block checked') {
         document.getElementById(ffx + '' + fy3).coloration();
     }
-    // if (document.getElementById(fx3 + '' + fy1) != null && document.getElementById(fx3 + '' + fy1).getAttribute('value') < 1 && document.getElementById(fx3 + '' + fy1).className != 'block checked') {
-    //     document.getElementById(fx3 + '' + fy1).coloration();
-    // }
+    if (document.getElementById(fx1 + '' + ffy) != null && document.getElementById(fx1 + '' + ffy).getAttribute('value') < 1 && document.getElementById(fx1 + '' + ffy).className != 'block checked') {
+        document.getElementById(fx1 + '' + ffy).coloration();
+    }
+
     if (document.getElementById(fx3 + '' + ffy) != null && document.getElementById(fx3 + '' + ffy).getAttribute('value') < 1 && document.getElementById(fx3 + '' + ffy).className != 'block checked') {
         document.getElementById(fx3 + '' + ffy).coloration();
     }
+    // if (document.getElementById(fx1 + '' + fy1) != null && document.getElementById(fx1 + '' + fy1).getAttribute('value') < 1 && document.getElementById(fx1 + '' + fy1).className != 'block checked') {
+    //     document.getElementById(fx1 + '' + fy1).coloration();
+    // }
+    // if (document.getElementById(fx1 + '' + fy3) != null && document.getElementById(fx1 + '' + fy3).getAttribute('value') < 1 && document.getElementById(fx1 + '' + fy3).className != 'block checked') {
+    //     document.getElementById(fx1 + '' + fy3).coloration();
+    // }
+    // if (document.getElementById(fx3 + '' + fy1) != null && document.getElementById(fx3 + '' + fy1).getAttribute('value') < 1 && document.getElementById(fx3 + '' + fy1).className != 'block checked') {
+    //     document.getElementById(fx3 + '' + fy1).coloration();
+    // }
     // if (document.getElementById(fx3 + '' + fy3) != null && document.getElementById(fx3 + '' + fy3).getAttribute('value') < 1 && document.getElementById(fx3 + '' + fy3).className != 'block checked') {
     //     document.getElementById(fx3 + '' + fy3).coloration();
     // }
@@ -86,30 +109,30 @@ Element.prototype.coloration = coloration;
 function blockCheck(ffx,ffy){
     
 }
-function explode(fx,fy){
-    audio.play()
-    audio.oncanplaythrough = function(){
-        audio.play();
-    }
-    this.style.backgroundColor = "red";
-    for(let i=0;fx>i;i++){
-        for(let o=0;fy>o;o++){
-            if(i<10){io = '0'+i}else{io = i};
-            // console.log(io);
-            if(o<10){oi = '0'+o}else{oi = o};
-            // console.log(oi);
-            // console.log(oi+""+io);
-            document.getElementById(io+""+oi).removeEventListener('click',coloration);
-        }
-    }
+// function explode(fx,fy){
+//     audio.play()
+//     audio.oncanplaythrough = function(){
+//         audio.play();
+//     }
+//     this.style.backgroundColor = "red";
+//     for(let i=0;fx>i;i++){
+//         for(let o=0;fy>o;o++){
+//             if(i<10){io = '0'+i}else{io = i};
+//             // console.log(io);
+//             if(o<10){oi = '0'+o}else{oi = o};
+//             // console.log(oi);
+//             // console.log(oi+""+io);
+//             document.getElementById(io+""+oi).removeEventListener('click',coloration);
+//         }
+//     }
 
-}
+// }
 function createMineField(parent,fieldx,fieldy,difficulty){
     score = parseInt(0);
 
     // console.log(fieldx);
     // console.log(fieldy);
-
+    updatescores();
 
 
     parent.innerHTML = "";
@@ -264,9 +287,14 @@ function mineClicks(allMines,fx,fy){
             for(x=0;x < document.getElementsByClassName('block bomb').length;x++){
                 document.getElementsByClassName('block bomb')[x].style.backgroundColor = "red";
             }
+            // alert('your final score: '+score);
             // if (confirm('game over, start over?')){
             //     createMineField(document.querySelector('.gamezone'),18,12,25);
             // }
+            if (score > localStorage.getItem(highscore)){
+                // alert('wait this is wrong')
+                savescore()
+            }
         });
     }
 }
