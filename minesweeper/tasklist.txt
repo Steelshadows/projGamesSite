@@ -1,0 +1,3 @@
+highscore!
+dynamic input fields -- CHECK
+SUPER AWESOME DEATH ANIMATION!!! --WORKS BUT NO VISUALS

@@ -8,21 +8,33 @@
     <div class="gameInfo">
         <div>
             <p>height:</p>
-            <input id="lx" type="number" placeholder="height" min="5" max="30" value="18">
+            <input id="lx" type="number" placeholder="height" min="5" max="50" value="18" onchange="
+            if(this.value>50){this.value= 50};
+            if(this.value<5){this.value= 5}">
         </div>
         <div>
             <p>width:</p>
-            <input id="ly" type="number" placeholder="width" min="5" max="30" value="12">
+            <input id="ly" type="number" placeholder="width" min="5" max="50" value="12" onchange="
+            if(this.value>50){this.value= 50};
+            if(this.value<5){this.value= 5}">
         </div>
         <div>
             <p>amount of mines:</p>
-            <input id="am" type="number" placeholder="mines" min="5" max="50" value="25">
+            <input id="am" type="range" placeholder="mines" min="1" max="6" value="3">
         </div>
         <div>
             <button onclick="createMineField(document.querySelector('.gamezone'),document.querySelector('#lx').value,document.querySelector('#ly').value,document.querySelector('#am').value);">
                 Start Over
             </button>
         </div>
+        <div>
+            <button onclick="if (score >= parseInt(localStorage.getItem('highscore'))){localStorage.setItem('highscore',score);};document.getElementById('highscore').innerHTML = 'highScore = ' + parseInt(localStorage.getItem('highscore'));">submit highscore</button>
+        </div>
+        <div>
+            <button onclick="localStorage.setItem('highscore',0);document.getElementById('highscore').innerHTML = 'highScore = ' + parseInt(localStorage.getItem('highscore'))">Reset highscore</button>
+        </div>
+        <div id="scoreboard"></div>
+        <div id="highscore"></div>
 
 
 
@@ -34,7 +46,7 @@
 
 <script src="../JS/mineSweeper.js"></script>
 <script>
-    createMineField(document.querySelector('.gamezone'),18,12,25);
+    createMineField(document.querySelector('.gamezone'),18,12,3);
 </script>
 </body>
 </html>
