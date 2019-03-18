@@ -39,11 +39,11 @@ button.onclick = function() {
     var player2pos = total;
 
     playerPosition['player' + 1] += player1pos;
-    playerPosition['player' + 2] += player2pos;
+    // playerPosition['player' + 2] += player2pos;
 
 
     movePlayer(1, playerPosition['player' + 1]);
-    movePlayer(2, playerPosition['player' + 2]);
+    // movePlayer(2, playerPosition['player' + 2]);
 
     console.log(playerPosition);
 
