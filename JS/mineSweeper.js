@@ -1,6 +1,8 @@
 //document specific
 scoreboard = document.querySelector('#scoreboard');
 highscores = document.getElementById('highscore');
+gamezone = document.querySelector('.gamezone');
+easterimage = "../img/easteregg.png";
 //document specific end
 score=0
 if(!localStorage.getItem('highscore')){
@@ -8,7 +10,7 @@ if(!localStorage.getItem('highscore')){
 }
 function updatescores(){
     scoreboard.innerHTML = 'score: '+score;
-    highscores.innerHTML = "highScore = " + parseInt(localStorage.getItem('highscore'));
+    highscores.innerHTML = "local high score: " + parseInt(localStorage.getItem('highscore'));
 }
 function savescore(){
     if (score >= parseInt(localStorage.getItem('highscore'))){localStorage.setItem('highscore',score);};
@@ -293,3 +295,40 @@ function mineClicks(allMines,fx,fy){
         });
     }
 }
+
+function cheat_revealbombs(){
+    for(x=0;x < document.getElementsByClassName('block bomb').length;x++){
+        document.getElementsByClassName('block bomb')[x].style.backgroundColor = "red";
+    }
+    return 'success'
+}
+
+
+//konami test
+
+if ( window.addEventListener ) {
+    var kkeys = [];
+    var konami = "38,38,40,40,37,39,37,39,66,65";
+    var easteregg = "69,65,83,84,69,82,69,71,71";
+
+    window.addEventListener("keydown", function(e){
+        kkeys.push( e.keyCode );
+        // kkode = kkeys.toString();
+        console.log(kkeys);
+        // console.log(kkode);
+        if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+            cheat_revealbombs();
+            alert('konami code');
+            kkeys = [];
+        }
+        if ( kkeys.toString().indexOf( easteregg ) >= 0 ) {
+            // gamezone.innerHTML = easterimage;
+            document.body.style = 'background-image:url("'+easterimage+'");';
+            alert('easteregg');
+            kkeys = [];
+        }
+        // User entered Konami Code, do something cool!!!
+        // cheat_revealbombs();
+    }, true);
+}
+//konami test end

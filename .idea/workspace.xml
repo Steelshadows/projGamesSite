@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="8c078926-ca16-45b5-8513-0eb09c89a92d" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="8c078926-ca16-45b5-8513-0eb09c89a92d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/mineSweeper.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/mineSweeper.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minesweeper/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/minesweeper/index.php" afterDir="false" />
+    </list>
+>>>>>>> 7d96a5fbfd1f7bf2c52191afd998bfaa044e4fc1
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +21,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/minesweeper/index.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="153">
               <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+=======
+            <state relative-caret-position="578">
+              <caret line="58" column="26" lean-forward="true" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+>>>>>>> 7d96a5fbfd1f7bf2c52191afd998bfaa044e4fc1
             </state>
           </provider>
         </entry>
@@ -22,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CSS/mineSweeper.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+            <state relative-caret-position="178">
+              <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -60,7 +73,12 @@
       <find>times</find>
       <find>score</find>
       <find>highscore</find>
+<<<<<<< HEAD
       <find>savescore()</find>
+=======
+      <find>ga</find>
+      <find>start over</find>
+>>>>>>> 7d96a5fbfd1f7bf2c52191afd998bfaa044e4fc1
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -72,8 +90,12 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/CSS/general.css" />
         <option value="$PROJECT_DIR$/minesweeper/index.html" />
-        <option value="$PROJECT_DIR$/CSS/mineSweeper.css" />
         <option value="$PROJECT_DIR$/JS/mineSweeper.js" />
+        <option value="$PROJECT_DIR$/CSS/mineSweeper.css" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/JS/mineSweeper.js" />
+=======
+>>>>>>> 7d96a5fbfd1f7bf2c52191afd998bfaa044e4fc1
         <option value="$PROJECT_DIR$/minesweeper/index.php" />
       </list>
     </option>
@@ -170,21 +192,30 @@
       <workItem from="1550734848596" duration="7204000" />
       <workItem from="1550748109338" duration="878000" />
       <workItem from="1551872887565" duration="8514000" />
+<<<<<<< HEAD
       <workItem from="1551940197229" duration="16131000" />
+=======
+      <workItem from="1551940197229" duration="10680000" />
+      <workItem from="1551952676594" duration="160000" />
+      <workItem from="1551952986332" duration="3369000" />
+>>>>>>> 7d96a5fbfd1f7bf2c52191afd998bfaa044e4fc1
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="69985000" />
+=======
+    <option name="totallyTimeSpent" value="68063000" />
+>>>>>>> 7d96a5fbfd1f7bf2c52191afd998bfaa044e4fc1
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.147651" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15085287" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="PHP-CGI Server" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -197,6 +228,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -207,24 +239,44 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../PHP/Labs/Lab1.7.php">
+    <entry file="file://$PROJECT_DIR$/../PHP/Labs/Lab1.7.php" />
+    <entry file="file://$USER_HOME$/Desktop/School/Projecten/Periode 2/4PM2/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        <state relative-caret-position="476">
+          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="47" selection-end-column="1" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="47" selection-start-column="47" selection-end-column="47" />
+=======
+    <entry file="file://$USER_HOME$/Desktop/School/Projecten/Periode 2/4PM2/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JS/mineSweeper.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="7" selection-end-line="29" selection-end-column="9" />
+>>>>>>> 7d96a5fbfd1f7bf2c52191afd998bfaa044e4fc1
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/mineSweeper.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="272">
           <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+=======
+        <state relative-caret-position="178">
+          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+>>>>>>> 7d96a5fbfd1f7bf2c52191afd998bfaa044e4fc1
         </state>
       </provider>
     </entry>
@@ -237,8 +289,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/minesweeper/index.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="153">
           <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+=======
+        <state relative-caret-position="578">
+          <caret line="58" column="26" lean-forward="true" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+>>>>>>> 7d96a5fbfd1f7bf2c52191afd998bfaa044e4fc1
         </state>
       </provider>
     </entry>
