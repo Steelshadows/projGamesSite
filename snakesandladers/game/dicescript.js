@@ -1,4 +1,10 @@
-
+turn = 0;
+function isEven(value) {
+    if (value%2 == 0)
+        return true;
+    else
+        return false;
+}
 var dice = {
     sides: 6,
     roll: function () {
@@ -35,15 +41,24 @@ button.onclick = function() {
     total += result;
     printNumber2(result);
     printTotal(total);
-    var player1pos = total;
-    var player2pos = total;
-
-    playerPosition['player' + 1] += player1pos;
-    playerPosition['player' + 2] += player2pos;
 
 
-    movePlayer(1, playerPosition['player' + 1]);
-    movePlayer(2, playerPosition['player' + 2]);
+    if (isEven(turn)){
+        var player1pos = total;
+        playerPosition['player' + 1] += player1pos;
+        movePlayer(1, playerPosition['player' + 1]);
+
+    }
+    else{
+        var player2pos = total;
+        playerPosition['player' + 2] += player2pos;
+        movePlayer(2, playerPosition['player' + 2]);
+
+
+
+    }
+    turn++
+
 
     console.log(playerPosition);
 
@@ -53,13 +68,16 @@ button.onclick = function() {
     if (playerPosition.player1 >=100){
         movePlayer(1, 100);
         alert("speler 1 heeft gewonnen");
+        // resetplayerpos()
     }
     if (playerPosition.player2 >=100){
         movePlayer(2, 100);
         alert("speler 2 heeft gewonnen");
+        // resetplayerpos()
     }
     if (playerPosition.player1 == 7){
         movePlayer(1,23)
+        // resetplayerpos()
     }
 
 };
@@ -103,3 +121,10 @@ function stylelader() {
 }
 
 
+//reset player positions
+function resetplayerpos(){
+    playerPosition.player1=1;
+    playerPosition.player2=1;
+    begin();
+}
+//reset player positions end
