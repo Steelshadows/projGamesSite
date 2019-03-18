@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html  lang="en">
+<html>
+<head>
+    <title>Dice</title>
+    <link rel="stylesheet" href="dicestyle.css">
+</head>
+<body onload="gevenid(); begin(); stylelader()">
+<div class="beep"><button id="testknop" onclick="begin()">niet op klikken</button></div>
+<div id="test"></div>
+
+    <div class="container">
+        <div id="background">
+            <table id="bg-table">
+                <tr>
+                    <th data-position="100" ><img class="player1" src="img/player1.png">100<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="99" ><img class="player1" src="img/player1.png">99<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="98" ><img class="player1" src="img/player1.png">98<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="97" ><img class="player1" src="img/player1.png">97<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="96" ><img class="player1" src="img/player1.png">96<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="95" ><img class="player1" src="img/player1.png">95<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="94" ><img class="player1" src="img/player1.png">94<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="93" ><img class="player1" src="img/player1.png">93<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="92" ><img class="player1" src="img/player1.png">92<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="91" ><img class="player1" src="img/player1.png">91<img class="player2" src="img/player2.png"> </th>
+                </tr>
+                <tr>
+                    <th data-position="81" ><img class="player1" src="img/player1.png">81<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="82" ><img class="player1" src="img/player1.png">82<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="83" ><img class="player1" src="img/player1.png">83<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="84" ><img class="player1" src="img/player1.png">84<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="85" ><img class="player1" src="img/player1.png">85<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="86" ><img class="player1" src="img/player1.png">86<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="87" ><img class="player1" src="img/player1.png">87<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="88" ><img class="player1" src="img/player1.png">88<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="89" ><img class="player1" src="img/player1.png">89<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="90" ><img class="player1" src="img/player1.png">90<img class="player2" src="img/player2.png"> </th>
+                </tr>
+                <tr>
+                    <th data-position="80" ><img class="player1" src="img/player1.png">80<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="79" ><img class="player1" src="img/player1.png">79<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="78" ><img class="player1" src="img/player1.png">78<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="77" ><img class="player1" src="img/player1.png">77<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="76" ><img class="player1" src="img/player1.png">76<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="75" ><img class="player1" src="img/player1.png">75<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="74" ><img class="player1" src="img/player1.png">74<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="73" ><img class="player1" src="img/player1.png">73<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="72" ><img class="player1" src="img/player1.png">72<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="71" ><img class="player1" src="img/player1.png">71<img class="player2" src="img/player2.png"> </th>
+                </tr>
+                <tr>
+                    <th data-position="61" ><img class="player1" src="img/player1.png">61<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="62" ><img class="player1" src="img/player1.png">62<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="63" ><img class="player1" src="img/player1.png">63<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="64" ><img class="player1" src="img/player1.png">64<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="65" ><img class="player1" src="img/player1.png">65<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="66" ><img class="player1" src="img/player1.png">66<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="67" ><img class="player1" src="img/player1.png">67<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="68" ><img class="player1" src="img/player1.png">68<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="69" ><img class="player1" src="img/player1.png">69<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="70" ><img class="player1" src="img/player1.png">70<img class="player2" src="img/player2.png"> </th>
+                </tr>
+                <tr>
+                    <th data-position="60" ><img class="player1" src="img/player1.png">60<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="59" ><img class="player1" src="img/player1.png">59<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="58" ><img class="player1" src="img/player1.png">58<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="57" ><img class="player1" src="img/player1.png">57<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="56" ><img class="player1" src="img/player1.png">56<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="55" ><img class="player1" src="img/player1.png">55<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="54" ><img class="player1" src="img/player1.png">54<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="53" ><img class="player1" src="img/player1.png">53<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="52" ><img class="player1" src="img/player1.png">52<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="51" ><img class="player1" src="img/player1.png">51<img class="player2" src="img/player2.png"> </th>
+                </tr>
+                <tr>
+                    <th data-position="41" ><img class="player1" src="img/player1.png">41<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="42" ><img class="player1" src="img/player1.png">42<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="43" ><img class="player1" src="img/player1.png">43<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="44" ><img class="player1" src="img/player1.png">44<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="45" ><img class="player1" src="img/player1.png">45<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="46" ><img class="player1" src="img/player1.png">46<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="47" ><img class="player1" src="img/player1.png">47<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="48" ><img class="player1" src="img/player1.png">48<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="49" ><img class="player1" src="img/player1.png">49<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="50" ><img class="player1" src="img/player1.png">50<img class="player2" src="img/player2.png"> </th>
+                </tr>
+                <tr>
+                    <th data-position="40" ><img class="player1" src="img/player1.png">40<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="39" ><img class="player1" src="img/player1.png">39<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="38" ><img class="player1" src="img/player1.png">38<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="37" ><img class="player1" src="img/player1.png">37<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="36" ><img class="player1" src="img/player1.png">36<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="35" ><img class="player1" src="img/player1.png">35<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="34" ><img class="player1" src="img/player1.png">34<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="33" ><img class="player1" src="img/player1.png">33<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="32" ><img class="player1" src="img/player1.png">32<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="31" ><img class="player1" src="img/player1.png">31<img class="player2" src="img/player2.png"> </th>
+                </tr>
+                <tr>
+                    <th data-position="21" ><img class="player1" src="img/player1.png">21<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="22" ><img class="player1" src="img/player1.png">22<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="23" ><img class="player1" src="img/player1.png">23<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="24" ><img class="player1" src="img/player1.png">24<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="25" ><img class="player1" src="img/player1.png">25<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="26" ><img class="player1" src="img/player1.png">26<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="27" ><img class="player1" src="img/player1.png">27<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="28" ><img class="player1" src="img/player1.png">28<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="29" ><img class="player1" src="img/player1.png">29<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="30" ><img class="player1" src="img/player1.png">30<img class="player2" src="img/player2.png"> </th>
+                </tr>
+                <tr>
+                    <th data-position="20" ><img class="player1" src="img/player1.png">20<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="19" ><img class="player1" src="img/player1.png">19<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="18" ><img class="player1" src="img/player1.png">18<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="17" ><img class="player1" src="img/player1.png">17<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="16" ><img class="player1" src="img/player1.png">16<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="15" ><img class="player1" src="img/player1.png">15<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="14" ><img class="player1" src="img/player1.png">14<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="13" ><img class="player1" src="img/player1.png">13<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="12" ><img class="player1" src="img/player1.png">12<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="11" ><img class="player1" src="img/player1.png">11<img class="player2" src="img/player2.png"> </th>
+                </tr>
+                <tr>
+                    <th data-position="1" ><img class="player1" src="img/player1.png">1<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="2" ><img class="player1" src="img/player1.png">2<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="3" ><img class="player1" src="img/player1.png">3<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="4" ><img class="player1" src="img/player1.png">4<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="5" ><img class="player1" src="img/player1.png">5<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="6" ><img class="player1" src="img/player1.png">6<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="7" ><img class="player1" src="img/player1.png">7<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="8" ><img class="player1" src="img/player1.png">8<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="9" ><img class="player1" src="img/player1.png">9<img class="player2" src="img/player2.png"> </th>
+                    <th data-position="10"><img class="player1" src="img/player1.png">10<img class="player2" src="img/player2.png"> </th>
+                </tr>
+            </table>
+        </div>
+        <div class="dice">
+            <p id="placeholder"></p>
+            <p id="placeholder2"></p>
+            <p id="total"></p>
+        <button id="button">Roll Dice</button>
+        <script src="dicescript.js"></script>
+        </div>
+    </div>
+</body>
+</html>
