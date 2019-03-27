@@ -1,4 +1,17 @@
 <?php
+if(isset($_GET['pname'])&&isset($_GET['updscore'])){
+    $playernameupdate = htmlspecialchars($_GET['pname']);
+    $playerscorupdate = htmlspecialchars($_GET['updscore']);
+    $scorefile = fopen('highScore/scores.txt','a');
+    $updatescoretext = $playernameupdate.'-'.$playerscorupdate.';';
+    fwrite($scorefile,$updatescoretext);
+    fclose($scorefile);
+//    echo $updatescoretext;
+    echo '<script>
+            baseurl = location.protocol + \'//\' + location.host + location.pathname;
+            if (window.location != baseurl){window.location = baseurl}</script>';
+
+ }
 function build_sorter($key) {
     return function ($a, $b) use ($key) {
         return strnatcmp($b[$key], $a[$key]);
@@ -84,6 +97,7 @@ $JStop5 = ' var top1 ='.$top5[0]['score'].';
         <div id="scoreboard"></div>
         <div id="highscore"></div>
         <div id="leaderboard"><?=$onlineScoreboard?></div>
+<!--        <div><button onclick="document.body.style.backgroundImage = 'url(\'../img/minesweeper.jpg\')'">minesweeper BG</button></div>-->
 
 
 

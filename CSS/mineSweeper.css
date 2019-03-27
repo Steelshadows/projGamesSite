@@ -1,11 +1,18 @@
 body {
-    background-image: url("space.gif");
+
+    background-color: rgb(177,206,200);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     height: 100%;
     background-size: cover;
+    color:white ;
     color: white;
+    text-shadow:
+            -1px -1px 0 #555,
+            1px -1px 0 #555,
+            -1px 1px 0 #555,
+            1px 1px 0 #555;
 
 }
 .container{
@@ -22,7 +29,7 @@ body {
     min-height: 25px;
     border:1px solid black;
     display:table-cell;
-    background-color: deepskyblue;
+    background-color: gray;
 }
 
 .row{
@@ -45,7 +52,7 @@ body {
 
 .button {
     border-radius: 4px;
-    background-color: deepskyblue;
+    background-color: darkgreen;
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -80,4 +87,7 @@ body {
 .button:hover span:after {
     opacity: 1;
     right: 0;
+}
+.gamezone .row,.gamezone .row .cell{
+    opacity:0.9;
 }
