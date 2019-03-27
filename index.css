@@ -1,0 +1,91 @@
+body {
+    background-color: #f0ffed
+}
+.logo {
+    margin-left: 40%;
+}
+
+
+.menu {
+    position: absolute;
+    right: 43%;
+}
+.menu ul li {
+    display: inline;
+    padding: 0 5px;
+    width: 0px;
+}
+
+.menu ul li a, a:link, a:visited, a:active {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+}
+
+.menu ul li a:hover {
+    color: #00ff40;
+    border-bottom: 5px solid #00ff40;
+    border-top:  5px solid #00ff40;
+}
+
+    .mid {
+        width: 300px;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 80px;
+        width: auto;
+        color: black;
+        font-family: Georgia;
+        font-size: 35px;
+
+    }
+
+    .mid2 {
+        width: 300px;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 100px;
+        color: black;
+        width: auto;
+        font-family: georgia;
+        font-size: 30px;
+    }
+
+.facebook {
+    border:2px solid  white;
+    position:absolute;
+    left: 38%;
+    top: 85%;
+    background-color: #83b6cc;
+    border-radius: 22px;
+    display:inline-block;
+    font-family: Arial;
+    font-size:17px;
+    font-weight:bold;
+    padding:14px 54px;
+    text-decoration:none;
+    text-shadow:1px 1px 50px #83b6cc;
+}
+
+.facebook:hover {
+    background-color: transparent;
+    color: #83b6cc;
+}
+
+@media screen and (max-width:800px) {
+    .mid {
+        width: 300px;
+        max-width: 100%;
+    }
+    .mid2 {
+        width: 300px;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 100px;
+        color: black;
+        width: auto;
+        font-family: georgia;
+        font-size: 30px;
+    }
+}
