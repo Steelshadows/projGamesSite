@@ -44,6 +44,7 @@ button.onclick = function() {
     printTotal(total);
 
 
+
     if (isEven(turn)){
         currentplayer = 2;
         var player1pos = total;
@@ -61,6 +62,7 @@ button.onclick = function() {
 
     }
     turn++
+
 
 
     console.log(playerPosition);
