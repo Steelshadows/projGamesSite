@@ -1,0 +1,92 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+button {
+    background-color: rgb(2, 6, 6);
+    border-radius: 6px;
+    border: none;
+    color: limegreen;
+    padding: 10px;
+    text-transform: uppercase;
+    width: 200px;
+    cursor: pointer;
+    position: absolute;
+    top: 90%;
+    left: 43%;
+}
+
+#placeholder , #placeholder2 {
+    height: 100px;
+    width: 100px;
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid purple;
+    border-radius: 10px;
+    font-size:80px;
+    background-color: black;
+    color: purple;
+}
+
+#total {
+    height: 100px;
+    width: 100px;
+    padding: 0px;
+    margin-top: 10%;
+    border: 1px solid limegreen;
+    border-radius: 10px;
+    font-size:80px;
+    background-color: black;
+    color: limegreen;
+}
+
+
+/*#bg-table{*/
+    /*position: relative;*/
+/*}*/
+table {
+    width: 650px;
+    height: 650px;
+    border: 2px black solid;
+    position: fixed;
+    background-color: black;
+}
+th {
+    border: 1px solid limegreen;
+}
+tr:nth-child(odd) th:nth-child(even), tr:nth-child(even) th:nth-child(odd) {
+    background: black; color: limegreen;
+}
+tr:nth-child(odd) th:nth-child(odd), tr:nth-child(even) th:nth-child(even) {
+    background: limegreen; color: black
+}
+#background {
+    margin-left: 30%;
+    background-color: black;
+    position: relative;
+}
+html{
+    background-color: darkslategray;
+}
+h2{
+    color: limegreen;
+}
+.player1{
+    width: 20px;
+    display: none;
+    position: absolute;
+}
+.player2{
+    width: 20px;
+    display: none;
+    position: absolute;
+}
+#testknop{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    border: solid red;
+    width: 100px;
+    height: 100px;
+}
+
