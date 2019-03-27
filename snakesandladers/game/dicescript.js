@@ -1,4 +1,5 @@
 turn = 0;
+currentplayer = '';
 function isEven(value) {
     if (value%2 == 0)
         return true;
@@ -44,12 +45,14 @@ button.onclick = function() {
 
 
     if (isEven(turn)){
+        currentplayer = 2;
         var player1pos = total;
         playerPosition['player' + 1] += player1pos;
         movePlayer(1, playerPosition['player' + 1]);
 
     }
     else{
+        currentplayer = 1;
         var player2pos = total;
         playerPosition['player' + 2] += player2pos;
         movePlayer(2, playerPosition['player' + 2]);
@@ -75,8 +78,11 @@ button.onclick = function() {
         alert("speler 2 heeft gewonnen");
         // resetplayerpos()
     }
-    if (playerPosition.player1 == 7){
-        movePlayer(1,23)
+
+    if (playerPosition['player' + currentplayer] == 7){
+        playerPosition['player' + currentplayer] += 16;
+        movePlayer(1,playerPosition['player' + currentplayer]);
+
         // resetplayerpos()
     }
 
