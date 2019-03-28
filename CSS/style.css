@@ -2,13 +2,13 @@ body {
     background-color: #f0ffed
 }
 .logo {
-    margin-left: 40%;
+    padding-left: calc(50% - 120px);
 }
 
 
 .menu {
-    position: absolute;
-    right: 43%;
+    width:330px;
+    padding-left: calc(50% - 165px);
 }
 .menu ul li {
     display: inline;
@@ -57,7 +57,7 @@ body {
 .facebook {
     border:2px solid  white;
     position:absolute;
-    left: 38%;
+    left: calc(50% - 180px);
     top: 85%;
     background-color: #83b6cc;
     border-radius: 22px;
@@ -74,8 +74,12 @@ body {
     background-color: transparent;
     color: #83b6cc;
 }
+.centered{
+    padding-left: 25%;
+    padding-right: 25%;
+}
 
-@media screen and (max-width:800px) {
+@media only screen and (max-width:800px) {
     .mid {
         width: 300px;
         max-width: 100%;
