@@ -1,33 +1,50 @@
 <!doctype html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
 
-    <title>Games</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
 </head>
 <body>
-<div class="logo">
-    <img src="logo.png" alt="logo ">
+<header>
+    <div class="logo">
+        <img src="logo.png" style="max-width:100%;height:auto;">
+    </div>
     <div class="menu">
         <nav>
-            <ul>
+            <ul class="topnav" id="myTopnav">
                 <li><a href="index.html">Home</a><li>
                 <li><a href="games.html">Games</a></li>
-                <li><a href="audio.html">Over ons</a></li>
-                <li><a href="video.html">Contact formulier </a><li>
+                <li><a href="about.html">Over ons</a></li>
+                <li><a href="contact.php">Contact formulier </a>
+                <li class="icon"><a href="javascript:void(0);" class="icon" onclick="myFunction()">menu</a></li>
             </ul>
         </nav>
     </div>
-</div>
-<div class="mlogo">
-    <a href="minesweeper.html" target="_blank">
-        <img src="Minesweeper%20logo.png" alt="HTML tutorial">
-    </a>
-</div>
+</header>
 
+
+<!--menu script-->
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+<!--menu script end-->
+<div class="centered">
+    <div class="mlogo">
+        <a href="minesweeper.html" target="_blank">
+            <img src="Minesweeper%20logo.png" alt="HTML tutorial">
+        </a>
+    </div>
+</div>
 </body>
 </html>
