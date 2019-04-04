@@ -5,10 +5,12 @@
     <title>Dice</title>
     <link rel="stylesheet" href="dicestyle.css">
 </head>
-<body onload="gevenid(); begin(); stylelader()">
-<div class="beep"><button id="testknop" onclick="resetplayerpos()">niet op klikken</button></div>
-<div id="test"></div>
-
+<body onload="gevenid(); begin(); stylelader(); loadhs()">
+<div class="beep"><button id="testknop" onclick="resetplayerpos()">Begin opnieuw</button></div>
+<div id="hsp1"></div>
+<div id="hsp2"></div>
+<div id="hs1text">Dit is de highscore van speler 1</div>
+<div id="hs2text">Dit is de highscore van speler 2</div>
     <div class="container">
         <div id="background">
             <table id="bg-table">

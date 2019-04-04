@@ -1,3 +1,5 @@
+
+
 * {
     font-family: Helvetica, Arial, sans-serif;
     text-align: center;
@@ -41,9 +43,7 @@ button {
 }
 
 
-/*#bg-table{*/
-    /*position: relative;*/
-/*}*/
+
 table {
     width: 650px;
     height: 650px;
@@ -51,11 +51,13 @@ table {
     position: fixed;
     background-color: black;
 }
+
 th {
     border: 1px solid limegreen;
 }
 tr:nth-child(odd) th:nth-child(even), tr:nth-child(even) th:nth-child(odd) {
     background: black; color: limegreen;
+    width: 400px;
 }
 tr:nth-child(odd) th:nth-child(odd), tr:nth-child(even) th:nth-child(even) {
     background: limegreen; color: black
@@ -83,10 +85,66 @@ h2{
 }
 #testknop{
     position: absolute;
-    top: 10%;
-    left: 10%;
+    top: 70%;
+    left: 10px;
     border: solid red;
     width: 100px;
     height: 100px;
 }
-
+#hsp1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    color: red;
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    width: 50px;
+    height: 50px;
+    border: solid purple 1px;
+    border-radius: 6px;
+}
+#hsp2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    color: red;
+    position: absolute;
+    top: 17%;
+    left: 80%;
+    width: 50px;
+    height: 50px;
+    border: solid purple 1px;
+    border-radius: 6px;
+}
+#hs1text{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: red;
+    background-color: black;
+    top: 10%;
+    left: 85%;
+    width: 100px;
+    height: 50px;
+    border: solid limegreen 1px;
+    border-radius: 6px;
+    font-size: 12px;
+}#hs2text{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: red;
+    background-color: black;
+    top: 17%;
+    left: 85%;
+    width: 100px;
+    height: 50px;
+    border: solid limegreen 1px;
+    border-radius: 6px;
+    font-size: 12px;
+}
