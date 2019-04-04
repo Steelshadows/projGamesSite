@@ -1,10 +1,10 @@
 turn = 0;
-<<<<<<< HEAD
+
 p1turns =0;
 p2turns =0;
-=======
-currentplayer = '';
->>>>>>> caa3e4977dc2e1e86b72f1d1a9de36aebb00ef40
+
+
+
 function isEven(value) {
     if (value%2 == 0){
         p2turns++;
