@@ -1,6 +1,10 @@
 turn = 0;
+<<<<<<< HEAD
 p1turns =0;
 p2turns =0;
+=======
+currentplayer = '';
+>>>>>>> caa3e4977dc2e1e86b72f1d1a9de36aebb00ef40
 function isEven(value) {
     if (value%2 == 0){
         p2turns++;
@@ -54,12 +58,14 @@ button.onclick = function() {
 
 
     if (isEven(turn)){
+        currentplayer = 2;
         var player1pos = total;
         playerPosition['player' + 1] += player1pos;
         movePlayer(1, playerPosition['player' + 1]);
 
     }
     else{
+        currentplayer = 1;
         var player2pos = total;
         playerPosition['player' + 2] += player2pos;
         movePlayer(2, playerPosition['player' + 2]);
@@ -109,10 +115,12 @@ button.onclick = function() {
 
 
     }
+
       //laders p1
     if (playerPosition.player1 == 7){
         movePlayer(1,23)
         playerPosition.player1 = 23;
+
 
     }
     if (playerPosition.player1 == 16){

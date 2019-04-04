@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,34 +15,41 @@
     </div>
     <div class="menu">
         <nav>
-            <ul>
+            <ul class="topnav" id="myTopnav">
                 <li><a href="index.html">Home</a><li>
                 <li><a href="games.html">Games</a></li>
                 <li><a href="audio.html">Over ons</a></li>
-                <li><a href="video.html">Contact formulier </a><li>
+                <li><a href="video.html">Contact formulier </a>
+                <li class="icon"><a href="javascript:void(0);" class="icon" onclick="myFunction()">menu</a></li>
             </ul>
         </nav>
     </div>
 </header>
+
+
+<!--menu script-->
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+<!--menu script end-->
+
 
 <div class="centered">
     <!--content-->
 
 
 
-    <h2>
-        De Blije Dobbelsteen
-    </h2>
 
-    <p>Is een website waarbij</p>
-    <p>wij oude spellen weer</p>
-    <p>tot levend maken!</p>
-    </div>
-    <a class="facebook" href="https://www.facebook.com/blije.dobbelsteen.9" target="blank"> Blije Dobbelsteen op Facebook</a>
 
 
     <!--content end-->
 </div>
 </body>
 </html>
-
