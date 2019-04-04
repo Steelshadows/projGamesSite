@@ -1,10 +1,22 @@
 turn = 0;
-currentplayer = '';
+
+p1turns =0;
+p2turns =0;
+
+
+
 function isEven(value) {
-    if (value%2 == 0)
+    if (value%2 == 0){
+        p2turns++;
         return true;
-    else
+
+    }
+
+    else{
+        p1turns++;
         return false;
+    }
+
 }
 var dice = {
     sides: 6,
@@ -63,34 +75,127 @@ button.onclick = function() {
     }
     turn++
 
-
+    console.log(p1turns);
+    console.log(p2turns);
 
     console.log(playerPosition);
 
     if (playerPosition.player1 >= 100 && playerPosition.player2 >=100){
         alert("wauw gelijk spel");
     }
+
+
+    if(!localStorage.getItem("p1hs")){
+        localStorage.setItem('p1hs',99999);
+    }
+    if(!localStorage.getItem("p2hs")){
+        localStorage.setItem('p2hs',99999);
+    }
+
+
     if (playerPosition.player1 >=100){
         movePlayer(1, 100);
         alert("speler 1 heeft gewonnen");
-        // resetplayerpos()
+        if (p1turns<localStorage.getItem('p1hs')) {
+            localStorage.setItem("p1hs", p1turns);
+        }
+        loadhs()
+
+
     }
     if (playerPosition.player2 >=100){
         movePlayer(2, 100);
         alert("speler 2 heeft gewonnen");
-        // resetplayerpos()
+        if (p2turns<localStorage.getItem('p2hs')) {
+            localStorage.setItem("p2hs", p2turns);
+        }
+        loadhs()
+
+
+
+
     }
 
-    if (playerPosition['player' + currentplayer] == 7){
-        playerPosition['player' + currentplayer] += 16;
-        movePlayer(1,playerPosition['player' + currentplayer]);
+      //laders p1
+    if (playerPosition.player1 == 7){
+        movePlayer(1,23)
+        playerPosition.player1 = 23;
 
-        // resetplayerpos()
+
+    }
+    if (playerPosition.player1 == 16){
+        movePlayer(1,33)
+        playerPosition.player1 = 33;
+
+    }
+    if (playerPosition.player1 == 75){
+        movePlayer(1,97)
+        playerPosition.player1 = 97;
+
+    }
+
+    //snakes p1
+    if (playerPosition.player1 == 35){
+        movePlayer(1,10)
+        playerPosition.player1 = 10;
+
+    }
+    if (playerPosition.player1 == 56){
+        movePlayer(1,19)
+        playerPosition.player1 = 19;
+
+    }
+    if (playerPosition.player1 == 99){
+        movePlayer(1,80)
+        playerPosition.player1 = 80;
+
+    }
+    //laders p2
+    if (playerPosition.player2 == 7){
+        movePlayer(2,23)
+        playerPosition.player2 = 23;
+
+    }
+    if (playerPosition.player2 == 16){
+        movePlayer(2,33)
+        playerPosition.player2 = 33;
+
+    }
+    if (playerPosition.player2 == 75){
+        movePlayer(2,97)
+        playerPosition.player2 = 97;
+
+    }
+
+    //snakes p2
+    if (playerPosition.player2 == 35){
+        movePlayer(2,10)
+        playerPosition.player2 = 10;
+
+    }
+    if (playerPosition.player2 == 56){
+        movePlayer(2,19)
+        playerPosition.player2 = 19;
+
+    }
+    if (playerPosition.player2 == 99){
+        movePlayer(2,80)
+        playerPosition.player2 = 80;
+
+    }
+    if (playerPosition.player1 > 100){
+        resetplayerpos()
+    }
+    if (playerPosition.player2 > 100){
+        resetplayerpos()
     }
 
 };
 
-
+function loadhs() {;
+    document.getElementById("hsp1").innerText = localStorage.getItem("p1hs") === "99999" ? '-' : localStorage.getItem("p1hs") ;
+    document.getElementById("hsp2").innerText = localStorage.getItem("p2hs") === "99999" ? '-' : localStorage.getItem("p2hs") ;
+}
 
 
 function gevenid() {
@@ -123,16 +228,52 @@ function begin(player, vakje) {
     movePlayer(2,1);
 }
 function stylelader() {
-    document.getElementById("9-6").style.background="#99e6ff";
-    document.getElementById("7-2").style.background="#99e6ff";
-
+    //laders
+    //1
+    document.getElementById("9-6").style.background ="url('img/ladders.png')";
+    document.getElementById("9-6").style.color = "red";
+    document.getElementById("7-2").style.color = "red";
+    document.getElementById("7-2").style.background="url('img/ladders.png')";
+    //1
+    //2
+    document.getElementById("8-4").style.background="url('img/woodladder1.png')";
+    document.getElementById("8-4").style.color = "red";
+    document.getElementById("6-7").style.color = "red";
+    document.getElementById("6-7").style.background ="url('img/woodladder1.png')";
+    //2
+    //3
+    document.getElementById("2-5").style.background= "url('img/ladder2-1.jpg')";
+    document.getElementById("2-5").style.color = "red";
+    document.getElementById("0-3").style.color = "red";
+    document.getElementById("0-3").style.background= "url('img/ladder2-1.jpg')";
+    //snakes
+    //1
+    document.getElementById("6-5").style.background ="url('img/slang1.jpg')";
+    document.getElementById("6-5").style.color = "red";
+    document.getElementById("9-9").style.color = "red";
+    document.getElementById("9-9").style.background ="url('img/slangstaart.jpg')";
+    //1
+    //2
+    document.getElementById("4-4").style.background = "url('img/slang1.jpg')";
+    document.getElementById("4-4").style.color = "red";
+    document.getElementById("8-1").style.color = "red";
+    document.getElementById("8-1").style.background = "url('img/slangstaart.jpg')";
+    //2
+    //3
+    document.getElementById("0-1").style.background = "url('img/slang1.jpg')";
+    document.getElementById("0-1").style.color = "red";
+    document.getElementById("2-0").style.color = "red";
+    document.getElementById("2-0").style.background = "url('img/slangstaart.jpg')";
 }
 
 
 //reset player positions
 function resetplayerpos(){
+    loadhs();
     playerPosition.player1=1;
+    p1turns =0;
     playerPosition.player2=1;
+    p2turns =0;
     begin();
 }
-//reset player positions end
+
