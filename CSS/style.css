@@ -8,6 +8,7 @@ body {
 
 
 .menu {
+
     /*!*width:330px;*!*/
     padding-left: calc(50% - 240px);
 }
@@ -80,7 +81,22 @@ body {
     padding-right: 25%;
 }
 
-@media screen and (max-width:800px) {
+@media only screen and (max-width:800px) {
+    .mid {
+        width: 300px;
+        max-width: 100%;
+    }
+    .mid2 {
+        width: 300px;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 100px;
+        color: black;
+        width: auto;
+        font-family: georgia;
+        font-size: 30px;
+    }
+
 }
 
 
