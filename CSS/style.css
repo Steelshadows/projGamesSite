@@ -31,7 +31,7 @@ body {
     border-top:  5px solid #00ff40;
 }
 .mlogo {
-    left: 40%;
+    display: inline-block;
 }
 .mid {
     width: 300px;
