@@ -27,8 +27,8 @@ body {
 
 .menu ul li a:hover {
     color: #00ff40;
-    border-bottom: 5px solid #00ff40;
-    border-top:  5px solid #00ff40;
+    border-bottom: 3px solid #00ff40;
+    /*border-top:  5px solid #00ff40;*/
 }
 .mlogo {
     display: inline-block;
