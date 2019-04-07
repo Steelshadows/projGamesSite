@@ -6,11 +6,15 @@
     <link rel="stylesheet" href="dicestyle.css">
 </head>
 <body onload="gevenid(); begin(); stylelader(); loadhs()">
-<div class="beep"><button id="testknop" onclick="resetplayerpos()">Begin opnieuw</button></div>
+<div><button id="reset" onclick="resetplayerpos()">Begin opnieuw</button></div>
 <div id="hsp1"></div>
 <div id="hsp2"></div>
 <div id="hs1text">Dit is de highscore van speler 1</div>
 <div id="hs2text">Dit is de highscore van speler 2</div>
+<form action="snakeshandleiding.html" method="get" target="_blank">
+<button id="handleidingbutton" type="submit" >Handleiding</button>
+</form>
+
     <div class="container">
         <div id="background">
             <table id="bg-table">

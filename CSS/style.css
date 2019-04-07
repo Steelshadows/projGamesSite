@@ -65,7 +65,7 @@ body {
 .facebook {
     border:2px solid  white;
     position:absolute;
-    left: calc(50% - 180px);
+    left: calc(50% - 150px);
     top: 85%;
     background-color: #83b6cc;
     border-radius: 22px;
@@ -83,8 +83,10 @@ body {
     color: #83b6cc;
 }
 .centered{
-    padding-left: 31%;
+    padding-left: 29%;
     padding-right: 25%;
+    font-family: Century;
+    text-align: center;
 }
 
 @media only screen and (max-width:800px) {
