@@ -33,6 +33,7 @@ body {
 .mlogo {
     display: inline-block;
     text-align: center;
+    padding:3%;
 
 }
 #snakelogo{
@@ -83,8 +84,8 @@ body {
     color: #83b6cc;
 }
 .centered{
-    padding-left: 31%;
-    padding-right: 25%;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 @media only screen and (max-width:800px) {
