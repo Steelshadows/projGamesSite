@@ -73,17 +73,13 @@ html{
 h2{
     color: limegreen;
 }
-.player1{
+.player1,.player2{
     width: 20px;
     display: none;
     position: absolute;
 }
-.player2{
-    width: 20px;
-    display: none;
-    position: absolute;
-}
-#testknop{
+
+#reset{
     position: absolute;
     top: 70%;
     left: 10px;
@@ -147,4 +143,82 @@ h2{
     border: solid limegreen 1px;
     border-radius: 6px;
     font-size: 12px;
+}
+ #handleidingsnake{
+     width: 10%;
+ }
+#handleidingbutton{
+    background-color: rgb(2, 6, 6);
+    border-radius: 6px;
+    border: none;
+    color: limegreen;
+    padding: 10px;
+    text-transform: uppercase;
+    width: 200px;
+    cursor: pointer;
+    position: absolute;
+    top: 90%;
+    left: 80%;
+}
+
+@media screen and (max-width: 600px){
+    table{
+        position: fixed;
+        left: 15%;
+        width: 250px;
+        height: 450px;
+        border: 1px;
+    }
+    th{
+        font-size: 10px;
+    }
+    #placeholder , #placeholder2 , #total{
+        height: 40px;
+        width: 40px;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #reset{
+        top: 80%;
+        width: 60px;
+        height: 40px;
+        font-size: 8px;
+    }
+    button{
+        width: 100px;
+        left: 15%;
+    }
+    #handleidingbutton{
+        width: 110px;
+        left: 50%;
+    }
+    #hsp1{
+        top: 70%;
+        width: 30px;
+        height: 30px;
+        left: 70%;
+    }
+    #hsp2{
+        top: 80%;
+        width: 30px;
+        height: 30px;
+        left: 70%;
+    }
+    #hs1text{
+        width: 50px;
+        top: 70%;
+        font-size: 10px;
+    }
+    #hs2text{
+        width: 50px;
+        top: 80%;
+        font-size: 10px;
+    }
+    .player1,.player2{
+        width: 10px;
+    }
+
 }

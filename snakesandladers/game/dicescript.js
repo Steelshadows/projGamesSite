@@ -44,7 +44,7 @@ playerPosition = {
     'player1':1,
     'player2':1,
 
-}
+};
 button.onclick = function() {
     var total = 0;
     var result = dice.roll();
