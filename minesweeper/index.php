@@ -60,7 +60,8 @@ $JStop5 = ' var top1 ='.$top5[0]['score'].';
 ?>
 <html>
 <head>
-<link rel="stylesheet" href="../CSS/mineSweeper.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/mineSweeper.css">
 </head>
 <body>
 <header>
