@@ -239,6 +239,7 @@ function stylelader() {
     //1
     //2
     document.getElementById("8-4").style.background="url('img/woodladder1.png')";
+
     document.getElementById("8-4").style.color = "red";
     document.getElementById("6-7").style.color = "red";
     document.getElementById("6-7").style.background ="url('img/woodladder1.png')";
