@@ -3,7 +3,7 @@
 if(isset($_POST['email'])) {
 
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "its.a.me.brand@gmail.com";
+    $email_to = "521282@edu.rocmn.nl";
     $email_subject = "Your email subject line";
 
     function died($error) {
@@ -141,7 +141,7 @@ if(isset($_POST['email'])) {
 
 
     <form name="contactform" method="post" action="">
-        <table width="450px">
+        <table>
             <tr>
                 <td valign="top">
                     <label for="first_name">First Name *</label>
@@ -184,12 +184,11 @@ if(isset($_POST['email'])) {
             </tr>
             <tr>
                 <td colspan="2" style="text-align:center">
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="verstuur">
                 </td>
             </tr>
         </table>
     </form>
-    <a href="http://www.freecontactform.com/email_form.php" target="_blank">Email Form</a>
 
 
 
